@@ -9,10 +9,11 @@
   <a href="form.html">レシピの新規登録</a>
 
 <?php
-$user = "suzuki";
-$pass = "wakusei0921";
+//$user = "suzuki";
+//$pass = "wakusei0921";
+require_once '\xampp\db_config.php';
 try{
-$dbh = new PDO('mysql:host=localhost;dbname=db1;charset=utf8', $user, $pass);
+$dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8', $user, $pass);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "SELECT * FROM recipes";
 $stmt = $dbh->query($sql);

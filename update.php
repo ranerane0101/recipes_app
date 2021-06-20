@@ -1,6 +1,7 @@
 <?php
-$user = "suzuki";
-$pass = "wakusei0921";
+//$user = "suzuki";
+//$pass = "wakusei0921";
+require_once '\xampp\db_config.php';
 $recipe_name = $_POST['recipe_name'];
 $howto = $_POST['howto'];
 $category = (int) $_POST['category'];
@@ -9,7 +10,7 @@ $budget = (int) $_POST['budget'];
 try{
   if(empty($_POST['id'])) throw new Exception('ID不正');
   $id = (int) $_POST['id'];
-  $dbh = new PDO('mysql:host=localhost;dbname=db1;', $user, $pass);
+  $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;', $user, $pass);
   $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "UPDATE recipes SET recipe_name = ?, category = ?, difficulty = ?, budget = ?, howto = ? WHERE id = ?";
