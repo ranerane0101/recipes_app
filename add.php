@@ -1,17 +1,17 @@
 <?php
 //$user = "suzuki";
 //$pass = "wakusei0921";
-require_once '\xampp\db_config.php';
+//require_once '\xampp\db_config.php';
 $recipe_name = $_POST['recipe_name'];
 $howto = $_POST['howto'];
 $category = (int) $_POST['category'];
 $difficulty = (int) $_POST['difficulty'];
 $budget = (int) $_POST['budget'];
 try{
-  $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8',
-  $user,$pass);
-  $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-  $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  //$dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8',
+  //$user,$pass);
+  //$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+  //$dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
   $sql = "INSERT INTO recipes(recipe_name,category,difficulty,budget,howto) VALUES (?, ?, ?, ?, ?)";
   $stmt = $dbh->prepare($sql);
   $stmt->bindValue(1, $recipe_name, PDO::PARAM_STR);
