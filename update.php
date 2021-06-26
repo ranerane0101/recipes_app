@@ -10,9 +10,9 @@ $budget = (int) $_POST['budget'];
 try{
   if(empty($_POST['id'])) throw new Exception('ID不正');
   $id = (int) $_POST['id'];
-  //$dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;', $user, $pass);
-  //$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-  //$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;', $user, $pass);
+  $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "UPDATE recipes SET recipe_name = ?, category = ?, difficulty = ?, budget = ?, howto = ? WHERE id = ?";
   $stmt = $dbh->prepare($sql);
   $stmt->bindValue(1, $recipe_name, PDO::PARAM_STR);

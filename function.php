@@ -1,5 +1,5 @@
 <?php
-function dbConnect(){
+/*function dbConnect(){
   $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
   $db['heroku_c9b3d3edba4158f'] = ltrim($db['path'], '/');
   $dsn = "mysql:host={$db['us-cdbr-east-04.cleardb.com']};dbname={$db['heroku_c9b3d3edba4158f']};charset=utf8";
@@ -12,6 +12,6 @@ function dbConnect(){
   );
   $dbh = new PDO($dsn,$user,$password,$options);
   return $dbh;
-}
+}*/
 
 ?>
