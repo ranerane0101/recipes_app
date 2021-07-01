@@ -2,7 +2,7 @@
 //$user = "suzuki";
 //$pass = "wakusei0921";
 //require_once '\xampp\db_config.php';
-require_once '\xampp\prod.php';
+require_once '\prod.php';
 try{
   if(empty($_GET['id'])) throw new Exception('ID不正');
   $id = (int) $_GET['id'];

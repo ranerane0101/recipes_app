@@ -12,7 +12,7 @@
 //$user = "suzuki";
 //$pass = "wakusei0921";
 // require_once '\xampp\db_config.php';
-require_once '\xampp\prod.php';
+require_once '\prod.php';
 try{
 $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8', $user, $pass);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
