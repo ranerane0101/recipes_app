@@ -1,7 +1,7 @@
 <?php
 //$user = "suzuki";
 //$pass = "wakusei0921";
-require_once '\prod.php';
+require_once '.\..\xampp\prod.php';
 //require_once '\xampp\db_config.php';
 $recipe_name = $_POST['recipe_name'];
 $howto = $_POST['howto'];
