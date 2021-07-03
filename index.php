@@ -12,7 +12,7 @@
 //$user = "suzuki";
 //$pass = "wakusei0921";
 // require_once '\xampp\db_config.php';
-// require_once '.:\xampp\prod.php';
+require_once '.:\xampp\prod.php';
 // $user = "b2fbdeebe3f7ad";
 // $pass = "d01235c7"
 try{
