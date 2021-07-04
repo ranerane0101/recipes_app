@@ -1,8 +1,10 @@
 <?php
 //$user = "suzuki";
+$user = "b2fbdeebe3f7ad";
 //$pass = "wakusei0921";
+$pass = "d01235c7";
 //require_once '\xampp\db_config.php';
-require_once '.\..\xampp\prod.php';
+// require_once '.\..\xampp\prod.php';
 try{
   if(empty($_GET['id']))throw new Exception('ID不正');
   $id = (int) $_GET['id'];
