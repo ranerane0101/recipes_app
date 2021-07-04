@@ -1,6 +1,8 @@
 <?php
 //$user = "suzuki";
+$user = "b2fbdeebe3f7ad";
 //$pass = "wakusei0921";
+$pass = "d01235c7";
 require_once '.:\xampp\prod.php';
 //require_once '\xampp\db_config.php';
 $recipe_name = $_POST['recipe_name'];
