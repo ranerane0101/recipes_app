@@ -13,6 +13,7 @@ $budget = (int) $_POST['budget'];
 try{
   $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8',
   $user,$pass);
+  $dnh->set_charset('utf8');
   $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
   $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
   $sql = "INSERT INTO recipes(recipe_name,category,difficulty,budget,howto) VALUES (?, ?, ?, ?, ?)";
