@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>レシピの一覧</title>
-  <link rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
-<body class="container">
-  <h1 class="display-4">レシピの一覧</h1>
+<body class="bg-light">
+  <div class="container w-75">
+  <h1 class="text-center text-info my-4">レシピの一覧</h1>
   <a href="form.html">レシピの新規登録</a>
+</div>
 
 <?php
 //$user = "suzuki";
