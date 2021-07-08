@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>レシピの一覧</title>
+  <link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
 </head>
-<body>
-  <h1>レシピの一覧</h1>
+<body class="container">
+  <h1 class="display-4">レシピの一覧</h1>
   <a href="form.html">レシピの新規登録</a>
 
 <?php
