@@ -1,13 +1,15 @@
 <?php
-//$user = "suzuki";
+// $user = "suzuki";
 $user = "b2fbdeebe3f7ad";
-//$pass = "wakusei0921";
+// $pass = "wakusei0921";
 $pass = "d01235c7";
 //require_once '\xampp\db_config.php';
 // require_once '.\..\xampp\prod.php';
 try{
-  if(empty($_GET['id'])) throw new Exception('ID不正');
+  if(!isset($_GET['id'])) throw new Exception('ID不正');
+  if(!preg_match('/\A[0-9]{1,4}+\z/',$_GET['id'])) throw new Exception('ID不正');
   $id = (int) $_GET['id'];
+  if(($id < 1) || ($id) > 1000) throw new Exception('ID範囲外');
   $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8mb4',
   $user,$pass);
   $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

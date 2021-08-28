@@ -1,7 +1,7 @@
 <?php
-//$user = "suzuki";
+// $user = "suzuki";
 $user = "b2fbdeebe3f7ad";
-//$pass = "wakusei0921";
+// $pass = "wakusei0921";
 $pass = "d01235c7";
 //require_once '\xampp\db_config.php';
 // require_once '.\..\xampp\prod.php';
@@ -10,8 +10,11 @@ $howto = $_POST['howto'];
 $category = (int) $_POST['category'];
 $difficulty = (int) $_POST['difficulty'];
 $budget = (int) $_POST['budget'];
+
+include_once '\xampp\error_check.php';
 try{
-  if(empty($_POST['id'])) throw new Exception('ID不正');
+  if(!isset($_POST['id'])) throw new Exception('ID無し');
+  if(!preg_match('/\A[0-9]{1,4}+\z/',$_POST['budget'])) throw new Exception('ID不正');
   $id = (int) $_POST['id'];
   $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8mb4', $user, $pass);
   $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
