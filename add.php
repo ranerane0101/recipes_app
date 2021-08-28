@@ -11,7 +11,7 @@ $category = (int) $_POST['category'];
 $difficulty = (int) $_POST['difficulty'];
 $budget = (int) $_POST['budget'];
 
-include_once '\xampp\error_check.php';
+include_once '\XAMPP\error_check.php';
 try{
   $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8mb4',
   $user,$pass);
