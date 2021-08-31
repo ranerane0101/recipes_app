@@ -5,7 +5,7 @@ $user = "b2fbdeebe3f7ad";
 //$pass = "wakusei0921";
 $pass = "d01235c7";
 
-include_once '\xampp\error_check.php';
+
 // require_once '.:\xampp\prod.php';
 //require_once '\xampp\db_config.php';
 $recipe_name = $_POST['recipe_name'];
@@ -16,6 +16,7 @@ $budget = (int) $_POST['budget'];
 
 
 try{
+  include_once '\xampp\error_check.php';
   $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8mb4',
   $user,$pass);
   $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);

@@ -1,6 +1,6 @@
 <?php
 // $user = "suzuki";
-include_once '\xampp\error_check.php';
+
 $user = "b2fbdeebe3f7ad";
 // $pass = "wakusei0921";
 $pass = "d01235c7";
@@ -14,6 +14,7 @@ $budget = (int) $_POST['budget'];
 
 
 try{
+  include_once '\xampp\error_check.php';
   if(!isset($_POST['id'])) throw new Exception('ID無し');
   if(!preg_match('/\A[0-9]{1,4}+\z/',$_POST['budget'])) throw new Exception('ID不正');
   $id = (int) $_POST['id'];
