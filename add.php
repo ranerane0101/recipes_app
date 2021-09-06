@@ -16,7 +16,7 @@ $budget = (int) $_POST['budget'];
 
 
 try{
-  include __DIR__ .'/error_check.php';
+  include_once __DIR__ .'/error_check.php';
   $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_c9b3d3edba4158f;charset=utf8mb4',
   $user,$pass);
   $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
