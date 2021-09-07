@@ -14,7 +14,7 @@ $budget = (int) $_POST['budget'];
 
 
 try{
-  include_once __DIR__ . '/../../error_check.php';
+  include_once (__DIR__ . '/xampp/error_check.php');
   if(!isset($_POST['id'])) throw new Exception('ID無し');
   if(!preg_match('/\A[0-9]{1,4}+\z/',$_POST['budget'])) throw new Exception('ID不正');
   $id = (int) $_POST['id'];
